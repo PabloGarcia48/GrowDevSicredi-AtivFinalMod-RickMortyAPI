@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RICKandMorty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/styleRickMorty.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="./images/RICK_MORTY_ICON.png" alt="Rick and Morty black white logo" srcset="">
+    </header>
+    
+        <main>
+            <div class="title">
+                    <h1>API de RICK and Morty</h1>
+                <section class="sectionSearchBar">
+                    <input type="search" id="search" name="search" placeholder="Pesquise"/>
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </section>
+            </div>
+
+            <div id="divCards">
+                <div class="card">
+                    <span><img class="cardImage" src= "./images/rick-and-morty.png"></span>
+                    <span>
+                    <h2 class="cardText cardTitle">Título do card</h2>
+                    <p class="cardText infoCard">Vivo - Humano</p>
+                    <p class="cardText">Última localização conhecida</p>
+                    <p class="cardText infoCard">Planeta XPTO</p>
+                    <p class="cardText">Visto última vez em:</p>
+                    <p class="cardText infoCard">Nome do capítulo</p>
+                    </span>
+                </div>
+            </div>
+
+            <!-- <div class="separator"></div> -->
+            
+            <div id="divCards">
+                
+            </div>
+
+
+            
+            <section class="sectionFooterImage">
+                <img class="footerImage" src="./images/rick-and-morty.png" alt="Rick and Morty in a green water" srcset="">
+            </section>
+        </main>
+
+    <footer>
+        <span class="footerData" id="footerCharacters"></span>
+        <span class="footerData" id="footerLocations"></span>
+        <span class="footerData" id="footerEpisodes"></span>
+        <p class="devText">Desenvolvido por: <strong>Pablo Garcia</strong> em 2023</p>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/apiRickMorty.js"></script>
+    <script src="./js/scriptFooterAPIRickMorty.js"></script>
+    <script src="./js/scriptMainAPIRickMorty.js"></script>
+</body>
+</html>
