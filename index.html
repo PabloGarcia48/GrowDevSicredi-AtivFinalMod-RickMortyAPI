@@ -19,19 +19,21 @@
             <div class="title">
                     <h1>API de RICK and Morty</h1>
                 <section class="sectionSearchBar">
-                    <input type="search" id="search" name="search" placeholder="Pesquise"/>
-                    <span class="material-symbols-outlined">
-                        search
-                    </span>
+                    <form action="">
+                        <input type="search" id="search" name="search" placeholder="Pesquise"/>
+                        <button type="submit" id="searchBTN" class="btn"><span class="material-symbols-outlined">
+                            search
+                        </span></button>
+                    </form>
                 </section>
             </div>
 
-            <div id="divCards">
+            <!-- <div id="divCards">
                 <div class="card">
                     <span><img class="cardImage" src= "./images/rick-and-morty.png"></span>
                     <span>
                     <h2 class="cardText cardTitle">Título do card</h2>
-                    <p class="cardText infoCard">Vivo - Humano</p>
+                    <p class="cardText infoCard">🔴 Vivo - Humano</p>
                     <p class="cardText">Última localização conhecida</p>
                     <p class="cardText infoCard">Planeta XPTO</p>
                     <p class="cardText">Visto última vez em:</p>
@@ -40,14 +42,11 @@
                 </div>
             </div>
 
-            <!-- <div class="separator"></div> -->
+            <div class="separator"></div> -->
             
             <div id="divCards">
-                
             </div>
 
-
-            
             <section class="sectionFooterImage">
                 <img class="footerImage" src="./images/rick-and-morty.png" alt="Rick and Morty in a green water" srcset="">
             </section>
@@ -64,5 +63,7 @@
     <script src="./js/apiRickMorty.js"></script>
     <script src="./js/scriptFooterAPIRickMorty.js"></script>
     <script src="./js/scriptMainAPIRickMorty.js"></script>
+    <script src="./js/scriptApiPaginationRickMorty.js"></script>
+    <script src="./js/scriptApiSearchRickMorty.js"></script>
 </body>
 </html>

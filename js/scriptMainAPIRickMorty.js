@@ -13,6 +13,20 @@ async function bodyInformation() {
         // console.log(character.species);
         // console.log(character.location.name);
         // console.log(character.image);
+
+        const characterStatus = character.status
+        switch (characterStatus) {
+          case "Dead":
+            trafficLight = "🔴";
+            break;
+          case "Alive":
+            trafficLight = "🟢";
+            break;
+          case "unknown":
+            trafficLight = "🟤";
+            break;
+        }
+
         cardIndex += 1
         
         allCharacters.classList.add('divCard')
@@ -26,7 +40,7 @@ async function bodyInformation() {
             
             <span>
               <h2 class="cardText cardTitle">${character.name}</h2>
-                <p class="cardText infoCard" >${character.status} - ${character.species}</p>
+                <p class="cardText infoCard" >${trafficLight} ${character.status} - ${character.species}</p>
                 <p class="cardText" >Última localização conhecida</p>
                 <p class="cardText infoCard" >${character.location.name}</p>
                 <p class="cardText" >Visto última vez em:</p>
@@ -44,7 +58,7 @@ async function bodyInformation() {
             
             <span>
               <h2 class="cardText cardTitle">${character.name}</h2>
-                <p class="cardText infoCard" >${character.status} - ${character.species}</p>
+                <p class="cardText infoCard">${trafficLight} ${character.status} - ${character.species}</p>
                 <p class="cardText" >Última localização conhecida</p>
                 <p class="cardText infoCard" >${character.location.name}</p>
                 <p class="cardText" >Visto última vez em:</p>
@@ -55,9 +69,6 @@ async function bodyInformation() {
         }
 
       });
-
-
-
 
 
     } catch (error) {
