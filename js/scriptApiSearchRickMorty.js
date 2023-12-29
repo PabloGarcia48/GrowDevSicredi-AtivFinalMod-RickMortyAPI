@@ -1,3 +1,4 @@
+const foundCharacter = document.getElementById('divCards')
 const btn = document.getElementById('searchBTN');
 const digitedSearch = document.getElementById('search')
 let nameFilteredID = 0
@@ -39,6 +40,25 @@ async function searchCharacter() {
         console.log(charactersFiltered.species);
         console.log(charactersFiltered.location.name);
         console.log(charactersFiltered.image);
+
+        foundCharacter.classList.add('divCard')
+        foundCharacter.innerHTML += `
+        <div class="card">
+          <span>
+            <img class="cardImage" src= "${charactersFiltered.image}" width= "100px">
+          </span>
+          
+          <span>
+            <h2 class="cardText cardTitle">${charactersFiltered.name}</h2>
+              <p class="cardText infoCard" > ${charactersFiltered.status} - ${charactersFiltered.species}</p>
+              <p class="cardText" >Última localização conhecida</p>
+              <p class="cardText infoCard" >${charactersFiltered.location.name}</p>
+              <p class="cardText" >Visto última vez em:</p>
+              <p class="cardText infoCard" >Nome do capitulo</p>
+          </span>
+        </div>
+        <div class="separator"></div>
+      `
 
     } catch (error) {
       console.log('Erro ao carregar a API', error)
