@@ -1,19 +1,24 @@
-const allCharacters = document.getElementById('divCards')
-const separator1 = document.getElementById('separator')
+let paginaAtual = 0
 
-async function bodyInformation() {
+async function buscador(page) {
+  const busca = document.getElementById("search").value
+  
     try {
-      const characters = (await api.get('/character')).data.results //preparação da API
+       const characters = (await api.get(`/character/?name=${busca}&page=${page}`)).data.results //resultado da busca
+       renderizador(characters)
+      }
+    catch (error) {
+      console.log('Erro ao carregar a API', error)
+    }
+  }
 
-      let cardIndex = 0
-
-      characters.forEach(character => {
-        // console.log(character.name);
-        // console.log(character.status);
-        // console.log(character.species);
-        // console.log(character.location.name);
-        // console.log(character.image);
-
+function renderizador(characters) {
+  const allCharacters = document.getElementById('divCards')
+  const separator1 = document.getElementById('separator')
+  let cardIndex = 0
+  allCharacters.innerHTML = "" // limpa tudo na tela
+      characters.forEach(character => { //preenche a tela de novo
+     
         const characterStatus = character.status
         switch (characterStatus) {
           case "Dead":
@@ -67,13 +72,7 @@ async function bodyInformation() {
           </div>
           `
         }
+})
 
-      });
-
-
-    } catch (error) {
-      console.log('Erro ao carregar a API', error)
-    }
-  }
-
-  bodyInformation()
+}
+buscador()
