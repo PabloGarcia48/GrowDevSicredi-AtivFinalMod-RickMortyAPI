@@ -1,18 +1,37 @@
-let paginaAtual = 0
+let currentPage = 1
+let page = 1
 
-async function buscador(page) {
-  const busca = document.getElementById("search").value
-  
+const prevPage = document.getElementById('prevPage')
+const nextPage = document.getElementById('nextPage')
+
+function previousPageFunc() {
+  page = currentPage - 1
+  fetchCharacters(page)
+  currentPage = page
+  window.scrollTo({top: 150, behavior: 'smooth'})
+}
+
+function nextPageFunc() {
+  page = currentPage + 1
+  fetchCharacters(page)
+  currentPage = page
+  window.scrollTo({top: 150, behavior: 'smooth'})
+}
+
+async function fetchCharacters(page) {
+  const busca = document.getElementById("search").value  
     try {
        const characters = (await api.get(`/character/?name=${busca}&page=${page}`)).data.results //resultado da busca
-       renderizador(characters)
+       renderer(characters)
+       const pageNumbers = document.getElementById('pageNumbers')
+       pageNumbers.innerHTML = `${currentPage}`
       }
     catch (error) {
       console.log('Erro ao carregar a API', error)
     }
   }
 
-function renderizador(characters) {
+function renderer(characters) {
   const allCharacters = document.getElementById('divCards')
   const separator1 = document.getElementById('separator')
   let cardIndex = 0
@@ -72,7 +91,9 @@ function renderizador(characters) {
           </div>
           `
         }
+
+
 })
 
 }
-buscador()
+fetchCharacters(page)

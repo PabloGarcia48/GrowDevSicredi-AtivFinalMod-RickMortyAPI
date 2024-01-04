@@ -20,31 +20,21 @@
                     <h1>API de RICK and Morty</h1>
                 <section class="sectionSearchBar">
                     <form action="">
-                        <input type="search" oninput="buscador()" id="search" name="search" placeholder="Pesquise"/>
+                        <input type="search" oninput="fetchCharacters()" id="search" name="search" placeholder="Pesquise"/>
                         <button type="submit" id="searchBTN" class="btn"><span class="material-symbols-outlined">
                             search
                         </span></button>
                     </form>
                 </section>
             </div>
-
-            <!-- <div id="divCards">
-                <div class="card">
-                    <span><img class="cardImage" src= "./images/rick-and-morty.png"></span>
-                    <span>
-                    <h2 class="cardText cardTitle">Título do card</h2>
-                    <p class="cardText infoCard">🔴 Vivo - Humano</p>
-                    <p class="cardText">Última localização conhecida</p>
-                    <p class="cardText infoCard">Planeta XPTO</p>
-                    <p class="cardText">Visto última vez em:</p>
-                    <p class="cardText infoCard">Nome do capítulo</p>
-                    </span>
-                </div>
-            </div>
-
-            <div class="separator"></div> -->
             
             <div id="divCards">
+            </div>
+
+            <div class="pagination">
+                <button id="prevPage" onclick="previousPageFunc()">Anterior</button>
+                <div id="pageNumbers"></div>
+                <button id="nextPage" onclick="nextPageFunc()" >Próxima</button>
             </div>
 
             <section class="sectionFooterImage">
@@ -56,14 +46,12 @@
         <span class="footerData" id="footerCharacters"></span>
         <span class="footerData" id="footerLocations"></span>
         <span class="footerData" id="footerEpisodes"></span>
-        <p class="devText">Desenvolvido por: <strong>Pablo Garcia</strong> em 2023</p>
+        <p class="devText">Desenvolvido por: <a class="linkDev" href="https://github.com/PabloGarcia48" target="_blank"><strong>Pablo Garcia</strong></a> em 2023</p>
     </footer>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/apiRickMorty.js"></script>
     <script src="./js/scriptFooterAPIRickMorty.js"></script>
     <script src="./js/scriptMainAPIRickMorty.js"></script>
-    <script src="./js/scriptApiPaginationRickMorty.js"></script>
-    <!-- <script src="./js/scriptApiSearchRickMorty.js"></script> -->
 </body>
 </html>

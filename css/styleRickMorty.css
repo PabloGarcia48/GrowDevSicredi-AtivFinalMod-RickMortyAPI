@@ -95,9 +95,46 @@ input:focus {
     grid-column: span 2;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 2px;
+  }
+  
+  /* Estilo para os botões de página */
+  .pagination button {
+    background-color: green;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Estilo para o botão de página ativa */
+  .pagination button.active {
+    background-color: #1c331f;
+  }
+
+  .pagination invisible {
+    background-color: blue;
+  }
+
+  .pagination div {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: green;
+    font-weight: bold;
+  }
+
 .sectionFooterImage {
     position: relative;
-    width: 350px;
+    width: 380px;
     margin: 0 auto;
 }
 
@@ -112,9 +149,13 @@ input:focus {
 }
 
 .devText {
-    font-size: 13px;
+    font-size: 15px;
     text-align: center;
     margin-top: 60px;
+}
+
+.linkDev {
+    color: white;
 }
 
 
