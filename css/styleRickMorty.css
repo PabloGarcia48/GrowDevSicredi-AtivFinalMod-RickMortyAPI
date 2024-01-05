@@ -113,14 +113,9 @@ input:focus {
     cursor: pointer;
     font-size: 16px;
   }
-  
-  /* Estilo para o botão de página ativa */
-  .pagination button.active {
-    background-color: #1c331f;
-  }
 
-  .pagination invisible {
-    background-color: blue;
+  .invisible {
+    display: none;
   }
 
   .pagination div {

@@ -4,8 +4,6 @@ async function footerInformationCharacter() {
       const characters = response.info.count // Armazenando a resposta da API
       const footerCharacters = document.getElementById("footerCharacters") // Pegando o elemento do HTML através do id
       footerCharacters.innerHTML = `PERSONAGENS: ${characters}` //colocando o texto no html
-      
-      // console.log(`Personagens ${characters}`);
 
     } catch (error) {
       console.log('Erro ao carregar a API', error)
