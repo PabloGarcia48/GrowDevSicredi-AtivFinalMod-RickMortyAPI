@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RICKandMorty</title>
+
+    <link
+    rel="shortcut icon"
+    href="./images/rick-and-morty.png"
+    type="image/x-icon"
+  />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
@@ -20,7 +28,7 @@
                     <h1>API de RICK and Morty</h1>
                 <section class="sectionSearchBar">
                     <form action="">
-                        <input type="search" oninput="fetchCharacters()" id="search" name="search" placeholder="Pesquise"/>
+                        <input type="search" oninput="fetchCharacters(), makePaginationInvisible()" id="search" name="search" placeholder="Pesquise"/>
                         <button type="submit" id="searchBTN" class="btn"><span class="material-symbols-outlined">
                             search
                         </span></button>
@@ -31,7 +39,7 @@
             <div id="divCards">
             </div>
 
-            <div class="pagination">
+            <div class="pagination" id="pagination">
                 <button class="invisible" id="prevPage" onclick="previousPageFunc()">Anterior</button>
                 <div id="pageNumbers"></div>
                 <button id="nextPage" onclick="nextPageFunc()" >Próxima</button>
