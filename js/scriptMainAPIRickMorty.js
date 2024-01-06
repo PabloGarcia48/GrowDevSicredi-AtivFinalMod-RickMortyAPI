@@ -22,7 +22,7 @@ function previousPageFunc() {
   page = currentPage - 1
   fetchCharacters(page)
   currentPage = page
-  window.scrollTo({top: 150, behavior: 'smooth'})
+  window.scrollTo({top: 190, behavior: 'smooth'})
   nextPage.classList.remove('invisible')
   if (currentPage <= 1) {
     prevPage.classList.add('invisible')
@@ -33,7 +33,7 @@ function nextPageFunc() {
   page = currentPage + 1
   fetchCharacters(page)
   currentPage = page
-  window.scrollTo({top: 150, behavior: 'smooth'})
+  window.scrollTo({top: 190, behavior: 'smooth'})
   prevPage.classList.remove('invisible')
   if (currentPage >= totalPages) {
     nextPage.classList.add('invisible')

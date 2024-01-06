@@ -9,8 +9,13 @@
     font-weight: 600;
     text-align: center;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    font-size: 35px;
     /* font-family: 'Roboto Mono', monospace; */
+}
+
+.title h1 {
+    margin-bottom: 5px;
 }
 
 .sectionSearchBar {
@@ -18,8 +23,8 @@
     margin: 0 auto;
     border: 2px solid black;
     border-radius: 20px;
-    height: 40px;
-    width: 350px;
+    height: 50px;
+    width: 700px;
 }
 
 .sectionSearchBar:hover {
@@ -29,7 +34,7 @@
 input {
     border: none;
     border-radius: 10px;
-    width: 300px;
+    width: 640px;
     height: 40px;
 }
 
